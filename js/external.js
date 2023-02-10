@@ -4,7 +4,7 @@
 
 let userFavColor = prompt(`What is your favorite color?`);
 
-console.log(`Great, I love ${userFavColor} too!`);
+console.log(`Great, I love ${userFavColor} too!!`);
 
 let littleMermaid = prompt(`How many days did you rent the movie "The little mermaid"?`);
 let brotherBear = prompt(`How many days did you rent "Brother Bear"?`);
