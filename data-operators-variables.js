@@ -1,5 +1,5 @@
 let a = 1;
-let b = a++;
+let b = a++;// b = 1, a = 1
 // a = 2, b =1
 let c = ++a;
 // what is the value of a, b, and c?
@@ -18,8 +18,8 @@ e++;
 let perplexed;
 // perplexed is undefined (no value is assigned)
 perplexed + 2;
-// console.log(perplexed)
-// undefined
+// console.log(perplexed + 2)
+//Nan
 
 // let price = 2.7;
 // price.toFixed(2);
@@ -42,7 +42,6 @@ isNaN("")
 isNaN("string")
 // true
 isNaN("0")
-
 // false
 isNaN("1")
 // false
@@ -146,3 +145,50 @@ let facebook = 350
 let total = (google * 6) + (amazon * 4) + (facebook * 10)
 
 console.log("Your payment is $" + total)
+
+// let fullClass = false
+// let noConflictingSchedule = false
+//
+// let enrollStudent = !fullClass && !noConflictingSchedule
+// console.log(`when ${enrollStudent}, enroll the student, false, do not enroll`);
+
+let classFull = false;
+let classConflict = false;
+if (classFull === false && classConflict === false)
+    console.log("Registration is open!")
+else console.log("registration is closed")
+
+/////
+
+let itemsBought = 3;
+let offerExpired = false;
+let isPremiumMember = true;
+
+if ((itemsBought > 2 || isPremiumMember) && !offerExpired) {
+    console.log("Offer Available!");
+} else {
+    console.log("Sorry! cannot use offer");
+}
+
+///// EXERCISE 4 //////////
+
+let username = 'codeup';
+let password = 'notastrongpassword';
+
+let passwordLength = password.length >= 5;
+
+// console.log(passwordLength)
+console.log('Running indexOf on pass=> ', password.indexOf(username))
+let isUsernameInPass = password.indexOf(username) >= 0;
+
+///
+
+let lessThan20 = username.length <= 20;
+console.log(lessThan20);
+
+let noWhiteSpace = username.indexOf(" ") >= 0;
+let notWhiteSpace = password.indexOf(" ") >= 0;
+console.log(notWhiteSpace);
+console.log(noWhiteSpace);
+
+
