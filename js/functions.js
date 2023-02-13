@@ -69,11 +69,13 @@ let random = Math.floor((Math.random() * 3) + 1);
  */
 
 const isTwo = (num) => {
-    let result = num === 2
-    return result
+    let result = num === 2;
+    return result;
 }
 
-console.log(isTwo(random))
+let randomMessage = isTwo(random)
+console.log(`The random number is:${random}`)
+console.log(isTwo(randomMessage))
 
 /**
  * TODO:
@@ -86,24 +88,33 @@ console.log(isTwo(random))
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-
+// const  calculateTip = (tipPercentage, billTotal) => {
+//     let tipPercentageNum = parseFloat(tipPercentage);
+//     let billTotalNum = parseFloat(billTotal)
+//     let amountToTip = (tipPercentageNum / 100 * billTotalNum)
+//     return amountToTip
+// }
+//     let tipAmount = calculateTip()
+//
+// console.log(`The amount you should tip is: ${tipAmount}`)
 const calculteTip = (tip,bill) => {
     let totalTip = bill * tip
     return totalTip
 }
 
-//console.log(`Your tip is $${calculteTip(.3,20)}`)
+console.log(`Your tip is $${calculteTip(.3,20)}`)
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-let billTotal = calculteTip(prompt(`Enter you tip (0.30 for 30%)`),prompt(`What is the bill total?`))
+let billTotal =(calculteTip(prompt(`Enter you tip (0.30 for 30%)`),prompt(`What is the bill total?`)))
 
 alert(`Your total is $${billTotal}`)
 
-
+let userBill = parseFloat(prompt(`How much was`))
 
 
 /**
@@ -122,7 +133,7 @@ alert(`Your total is $${billTotal}`)
  */
 
 const applyDiscount = (price,discount) => {
-    let totalPrice = price * discount
+    let totalPrice = parseFloat(price) - parseFloat(price) * parseFloat(discount)
     return totalPrice
 }
 
