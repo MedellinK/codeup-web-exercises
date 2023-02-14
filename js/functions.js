@@ -12,13 +12,13 @@
 
 ///const sayHello = (name) => `Hello ${name}`
 
-const sayHello = (name) => {
-    let message = `Hello ${name}`
-    return message
-}
-let name = sayHello(`Kelvyn`)
-
-console.log(name)
+// const sayHello = (name) => {
+//     let message = `Hello ${name}`
+//     return message
+// }
+// let name = sayHello(`Kelvyn`)
+//
+// console.log(name)
 
 
 /**
@@ -29,9 +29,9 @@ console.log(name)
  * console.log 'helloMessage' to check your work
  */
 
-let helloMessage = sayHello(`Kelvyn`)
-
-console.log(helloMessage)
+// let helloMessage = sayHello(`Kelvyn`)
+//
+// console.log(helloMessage)
 
 /**
  * TODO:
@@ -40,15 +40,15 @@ console.log(helloMessage)
  * console.
  */
 
-let myName = `Kelvyn`
-
-sayHello(myName)
-
-console.log(myName)
-
-// Don't modify the following line, it generates a random number between 1 and 3
-// and stores it in a variable named random
-let random = Math.floor((Math.random() * 3) + 1);
+// let myName = `Kelvyn`
+//
+// sayHello(myName)
+//
+// console.log(myName)
+//
+// // Don't modify the following line, it generates a random number between 1 and 3
+// // and stores it in a variable named random
+// let random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -68,14 +68,14 @@ let random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-const isTwo = (num) => {
-    let result = num === 2;
-    return result;
-}
-
-let randomMessage = isTwo(random)
-console.log(`The random number is:${random}`)
-console.log(isTwo(randomMessage))
+// const isTwo = (num) => {
+//     let result = num === 2;
+//     return result;
+// }
+//
+// let randomMessage = isTwo(random)
+// console.log(`The random number is:${random}`)
+// console.log(isTwo(randomMessage))
 
 /**
  * TODO:
@@ -97,12 +97,12 @@ console.log(isTwo(randomMessage))
 //     let tipAmount = calculateTip()
 //
 // console.log(`The amount you should tip is: ${tipAmount}`)
-const calculteTip = (tip,bill) => {
-    let totalTip = bill * tip
-    return totalTip
-}
-
-console.log(`Your tip is $${calculteTip(.3,20)}`)
+// const calculteTip = (tip,bill) => {
+//     let totalTip = bill * tip
+//     return totalTip
+// }
+//
+// console.log(`Your tip is $${calculteTip(.3,20)}`)
 
 /**
  * TODO:
@@ -110,11 +110,11 @@ console.log(`Your tip is $${calculteTip(.3,20)}`)
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-let billTotal =(calculteTip(prompt(`Enter you tip (0.30 for 30%)`),prompt(`What is the bill total?`)))
-
-alert(`Your total is $${billTotal}`)
-
-let userBill = parseFloat(prompt(`How much was`))
+// let billTotal =(calculteTip(prompt(`Enter you tip (0.30 for 30%)`),prompt(`What is the bill total?`)))
+//
+// alert(`Your total is $${billTotal}`)
+//
+// let userBill = parseFloat(prompt(`How much was`))
 
 
 /**
@@ -132,9 +132,61 @@ let userBill = parseFloat(prompt(`How much was`))
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-const applyDiscount = (price,discount) => {
-    let totalPrice = parseFloat(price) - parseFloat(price) * parseFloat(discount)
-    return totalPrice
+// const applyDiscount = (price,discount) => {
+//     let totalPrice = parseFloat(price) - parseFloat(price) * parseFloat(discount)
+//     return totalPrice
+// }
+//
+// console.log(applyDiscount(20,.10))
+
+
+///Functions Pratice From Jaier in the SLack
+
+    //1.
+
+const returnTwo = 2
+
+console.log(returnTwo)
+
+    //2.
+
+const sayHowdy = `Howdy!`
+
+console.log(sayHowdy)
+
+    //3.
+
+const returnName = `Kelvyn Medellin`
+
+console.log(returnName)
+
+    //4.
+
+const addThree = (num) => {
+    let result = num + 3
+    return result
 }
 
-console.log(applyDiscount(20,.10))
+console.log(addThree(4))
+
+    //5.
+const sayString = (string) => {
+    return string
+}
+let stringThing = sayString(`rgh`)
+console.log(stringThing)
+
+
+function  reverseString(string){
+    let stringArray = string.split(``)
+    let reverseStringArray = stringArray.reverse()
+    let reversedString = reverseStringArray.join(``)
+    return reversedString
+}
+
+ console.log(reverseString(`Hello!`))
+
+
+isNaN()
+
+

@@ -132,18 +132,18 @@
 //console.log(sample.substring(6))
 
 // //EXERCISE 3 ////////////////
-
+//
 // let littleMermaid = 3
 // let brotherBear = 5
 // let hercules = 1
-//let price = 3
-// let total = (price * littleMermaid) + (price * brotherBear) + (price * hercules)
+// let price = 3
+// //let total = (price * littleMermaid) + (price * brotherBear) + (price * hercules)
 // console.log(total)
 // let priceLittle = 9
 // let priceBrother = 15
 // let priceHercules = 3
 //  console.log("You will have to pay $" + total.toString())
-//
+
 // let pricePerDay = 3
 // let movie1 = 3
 // let movie2 = 5
@@ -151,29 +151,29 @@
 //
 // let totalMovieCost = pricePerDay * (movie1 + movie2 + movie3)
 //console.log(`The price is $${total}`)
-// ////
-//
-// let google = 400
-// let amazon = 380
-// let facebook = 350
-// let total = (google * 6) + (amazon * 4) + (facebook * 10)
-//
-// console.log("Your payment is $" + total)
+////
+
+let google = 400
+let amazon = 380
+let facebook = 350
+let total = (google * 6) + (amazon * 4) + (facebook * 10)
+
+console.log("Your payment is $" + total)
 
 // let fullClass = false
 // let noConflictingSchedule = false
 //
 // let enrollStudent = !fullClass && !noConflictingSchedule
 // console.log(`when ${enrollStudent}, enroll the student, false, do not enroll`);
-
+//
 // let classFull = false;
 // let classConflict = false;
 // if (classFull === false && classConflict === false)
 //     console.log("Registration is open!")
 // else console.log("registration is closed")
-
-/////
-
+//
+// /////
+//
 // let itemsBought = 3;
 // let offerExpired = false;
 // let isPremiumMember = true;
@@ -191,12 +191,12 @@
 // let offerExpired = false;
 //
 // let canOfferApply = (premiumMember || (cartSize >= minCartSize) && !offerExpired)
-// console.log(canOfferApply)
+console.log(canOfferApply)
 
-///// EXERCISE 4 //////////
-
-let username = 'codeup';
-let password = 'notastrongpassword';
+// ///// EXERCISE 4 //////////
+//
+// let username = 'codeup';
+// let password = 'notastrongpassword';
 //
 // let passwordLength = password.length >= 5;
 //
@@ -208,8 +208,8 @@ let password = 'notastrongpassword';
 // ///
 //
 //
-let lessThan20 = username.length <= 20;
-console.log(lessThan20);
+// let lessThan20 = username.length <= 20;
+//console.log(lessThan20);
 ///
 
 //this
@@ -219,14 +219,14 @@ console.log(lessThan20);
 // console.log(noWhiteSpace);
 
 ////JASOSNS EXAMPLE
-let userLength = username.length
-let passLength = password.length
-let firstCharUser = username.substring(0,1);
-let lastCharUser = username.substring((userLength - 1), userLength)
-let firstCharPass = password.substring(0,1);
-let lastCharPass = password.substring((passLength - 1), passLength);
-
-let hasWhiteSpace = firstCharUser === ' ' || lastCharUser === ' ' ||  firstCharPass === ' ' || lastCharPass === ' '
-console.log(hasWhiteSpace)
-
-
+// let userLength = username.length
+// let passLength = password.length
+// let firstCharUser = username.substring(0,1);
+// let lastCharUser = username.substring((userLength - 1), userLength)
+// let firstCharPass = password.substring(0,1);
+// let lastCharPass = password.substring((passLength - 1), passLength);
+//
+// let hasWhiteSpace = firstCharUser === ' ' || lastCharUser === ' ' ||  firstCharPass === ' ' || lastCharPass === ' '
+// console.log(hasWhiteSpace)
+//
+//
