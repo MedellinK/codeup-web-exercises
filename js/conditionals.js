@@ -22,16 +22,16 @@
  * console.logging the function's return value
  */
 
-function analyzeColor (color){
-    color = color.toString()
-    if (color === `blue`){
-        return `Blue is the color of the sky`
-    } else {
-        return `I don't know anything about ${color}`
-    }
-}
+// function analyzeColor (color){
+//     color = color.toString()
+//     if (color === `blue`){
+//         return `Blue is the color of the sky`
+//     } else {
+//         return `I don't know anything about ${color}`
+//     }
+// }
 
-console.log(analyzeColor(`taco`))
+//console.log(analyzeColor(`taco`))
 
 // function analyzeColor(color){
 //     if (color = `blue`){
@@ -74,12 +74,30 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //
 // analyzeColor(`taco`)
 
+
+/////////
+//////
+///////////////////////        teacher example
+
+
+// function  analyzeColor(color){
+//     switch (color){
+//         case `red`:
+//             return `Roses are red`
+//         case `blue`
+//             return `The sky is sometimrs blue`
+//         default:
+//             return `I dont know what ${color} is. `
+//     }
+//
+// }
+
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
- */
+//  */
 // let color = prompt(`What is your favorite color?`)
 //
 // if (color.toLowerCase() === `blue`){
@@ -129,29 +147,32 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //         return(`Oops sorry, something went wrong.`)
 //     }
 // }
+///////////////this is your corect answer!
 
-// function calculateTotal(lucky, price){
-//     if (lucky === 0){
-//         price = price - 0
-//         return price
-//     } else if (lucky === 1){
-//         price = price - price * .10
-//         return price
-//     }else if (lucky === 2){
-//         price = price - price * .25
-//         return price
-//     }else if (lucky === 3){
-//         price = price - price * .35
-//         return price
-//         price = price - price * .50
-//         return price
-//     }else if (lucky === 5 ){
-//         price = price * 0
-//         return price
-//     }else {
-//         return
-//     }
-// }
+
+ function calculateTotal(lucky, price){
+    if (lucky === 0){
+        price = price - 0
+        return price
+    } else if (lucky === 1){
+        price = price - price * .10
+        return price
+    }else if (lucky === 2){
+        price = price - price * .25
+        return price
+    }else if (lucky === 3) {
+        price = price - price * .35
+        return price
+    } else if (lucky === 4 ){
+        price = price - price * .50
+        return price
+    }else if (lucky === 5 ){
+        price = price * 0
+        return price
+    }else {
+        return
+    }
+}
 
 /**
  * TODO:
@@ -161,15 +182,18 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
+//Generate a random number between 0 and 6
 
 // let luckyNumber = Math.floor(Math.random() * 6);
 //
-// let totalBill = prompt(`Total Bill?`)
+// let totalBill = parseFloat(prompt(`Total Bill?`))
 //
+// let priceAfterDiscount = calculateTotal(luckyNumber,totalBill)
 //
-// alert(`Your  lucky number was ${luckyNumber}, your total bill was $${totalBill},
-// and your price after discount is $${calculateTotal(luckyNumber,totalBill)}`)
+// alert(`Your  lucky number was ${luckyNumber}`)
+// alert(`Your total bill was ${totalBill.toLocaleString("en-US", {style:"currency", currency:"USD"})}`)
+// alert(`Your price after discount is ${priceAfterDiscount.toLocaleString("en-US", {style:"currency", currency:"USD"})}`)
+
 
 
 /**
@@ -214,6 +238,23 @@ let quest = confirm(`Would you like to enter a number?(Click "OK" if you do want
             alert(`${num} plus 100 is ${num + 100}`)
             alert(`${num} is a negative number`)
         } else {
-            alert(`Use the number keys please C:`)
+            alert(`Use the number keys only please C:`)
         }
     }
+
+
+    ///////////////// refactoring stuff
+function getNumber(){
+        const wantToEnterNumber = confirm(`Number?`);
+        if (wantToEnterNumber){
+            const userNumber = parseFloat(prompt(`What Number`))
+        }
+        return false
+}
+
+function analyzeNumber(number){
+        if (isNumericandNotNaN(number)){
+            alert(`That number is negative!`)
+
+        }
+}
