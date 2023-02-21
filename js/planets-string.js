@@ -13,7 +13,7 @@
 
     // planetsArray = planetsString.split(`|`)
     // console.log(planetsArray)
-
+    //
     // console.log(planetsArray);
 
     /**
@@ -28,9 +28,11 @@
      */
 
    let planetsArray = planetsString.split(`|`)
-    //console.log(planetsArray)
+    console.log(planetsArray)
      let brPlanets = planetsArray.join(`<br>`)
     console.log(brPlanets)
+
+    let planets
 
    //  planetsString = planetsString.push(`<ul>`).unshift(`<ul>`)
    //  planetsString = planetsString.unshift(`<ul>`)
