@@ -1,7 +1,44 @@
-.fancy-header {
 
+*{
+    box-sizing: border-box;
 }
+
+
+/*img{*/
+/*    display: block;*/
+/*    max-width: 100%;*/
+/*    width: 100%;*/
+/*}*/
+.main-header{
+    text-align: center;
+}
+
 .fancy-header {
-    color: purple; /* single line comment */
+    color: darkolivegreen; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+}
+
+h1,h2,h3,h4 {
+    text-decoration: underline;
+    color: darkolivegreen;
+}
+
+
+body {
+    margin: 0px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url("https://img.freepik.com/free-vector/sea-background-video-conferencing_52683-46343.jpg?size=626&ext=jpg&ga=GA1.2.509945137.1677535578&semt=ais");
+    background-size: cover;
+}
+
+ul{
+    list-style-type: square;
+}
+td { text-align: right; }
+td:first-child { text-align: left; }
+
+a {
+   color: hotpink;
 }

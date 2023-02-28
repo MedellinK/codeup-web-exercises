@@ -73,3 +73,11 @@ function arrayOfRandomNumbers(lengthOfArray){
     return array
 }
 
+/** check if input is a palindrome */
+function isPalindrome(input) {
+    if (typeof input === 'string') {
+        return input.toLowerCase() == input.toLowerCase().split('').reverse().join('');
+    } else {
+        return false;
+    }
+}
