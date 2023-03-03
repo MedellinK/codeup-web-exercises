@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    font-family: roboto,sans-serif;
+}
 .left-sidebar, .right-sidebar {
     flex: 0 1 250px;
 
@@ -16,12 +20,15 @@
     justify-content: start;
     padding: 15px 30px 15px 17px;
     text-decoration-color: black;
-    border-radius: 99px;
+    border-radius: 30px;
 
 }
 
+
 .sidebar-item:hover {
+    border-radius: 20px;
     background-color: cornflowerblue;
+
 }
 
 .tweet-button {
@@ -32,16 +39,17 @@
 
 .profile-button {
     align-items: center;
-    justify-content: end;
 }
 .profile-button-wrap{
     display: flex;
-    padding-top: 180px;
+    flex: 1 0 0;
+    flex-direction: column;
+    justify-content: end;
 }
 
 .search-bar {
     display: flex;
-    padding: 15px 0px 0px 17px;
+    padding: 15px 0px 0px 0px;
 }
 
 .sidebar-item-right {
@@ -52,4 +60,74 @@
     text-decoration-color: black;
     border-radius: 99px;
 
+}
+
+.first-three-pics,.last-3-pics{
+    display: flex;
+    max-width:100vw;
+}
+
+.pic-wrapper{
+    flex:1 0;
+    min-width:1px;
+    aspect-ratio: 4/3;
+    overflow:hidden;
+    border-radius: 5px;
+}
+
+.pic-wrapper .pic-wrapper img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    transition: all ease .3s;
+    /*filter: grayscale(1);*/
+}
+.pic-wrapper:hover img {
+    transform: scale(1.1);
+    /*filter: grayscale(0);*/
+}
+
+.six-pics{
+    padding: 20px 0px 0px 0px;
+}
+
+.back-arrow{
+    display: flex;
+    height: 20px;
+    width: 20px;
+    align-items: center;
+}
+.top-main-container{
+    display: flex;
+    align-items: center;
+
+}
+.top-main-name {
+    padding-left: 15px;
+}
+.tweets-number{
+    opacity: 50%;
+}
+.background-pic{
+    height: 200px;
+}
+.background-pic img {
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+}
+.avatar {
+
+    height: 100px;
+    width: 100px;
+    border-radius: 99999px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    box-shadow: 0 0 15px -9px #000;
+}
+.pull-image{
+    margin-top: -30px;
+}
+.edit-button{
+    border-radius: 20px;
+    border: 1px solid #cfd9de;
 }
