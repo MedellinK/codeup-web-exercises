@@ -1,0 +1,55 @@
+.left-sidebar, .right-sidebar {
+    flex: 0 1 250px;
+
+}
+
+.column {
+    background: darkseagreen;
+}
+
+.logo-wrapper{
+    padding: 15px 30px 30px 10px;
+}
+.sidebar-item{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 15px 30px 15px 17px;
+    text-decoration-color: black;
+    border-radius: 99px;
+
+}
+
+.sidebar-item:hover {
+    background-color: cornflowerblue;
+}
+
+.tweet-button {
+    padding: 15px 30px 15px 100px;
+    background-color: cornflowerblue;
+    border-radius: 50px;
+}
+
+.profile-button {
+    align-items: center;
+    justify-content: end;
+}
+.profile-button-wrap{
+    display: flex;
+    padding-top: 180px;
+}
+
+.search-bar {
+    display: flex;
+    padding: 15px 0px 0px 17px;
+}
+
+.sidebar-item-right {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 15px 30px 15px 17px;
+    text-decoration-color: black;
+    border-radius: 99px;
+
+}
