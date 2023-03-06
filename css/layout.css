@@ -75,10 +75,6 @@
     gap: unset;
 }
 
-.row.grow {
-   flex: 1 0 0;
-}
-
 /*
     The "column" is a container element that vertically separates its
     children, which are usually content elements. When paired with sibling columns,
@@ -108,4 +104,7 @@
 }
 .column.justify-space-between {
     justify-content: space-between;
+}
+.column.justify-bottom {
+    justify-content: end;
 }

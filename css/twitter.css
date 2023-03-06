@@ -31,10 +31,23 @@ body{
 
 }
 
+/*.tweet-button {*/
+/*    align-self: stretch;*/
+/*    align-items: center;*/
+/*    background-color: cornflowerblue;*/
+/*    border-radius: 50px;*/
+/*    justify-content: center;*/
+/*    display: flex;*/
+/*}*/
 .tweet-button {
-    padding: 15px 30px 15px 100px;
+    align-self: stretch;
+    align-items: center;
     background-color: cornflowerblue;
     border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px
 }
 
 .profile-button {
@@ -129,5 +142,12 @@ body{
 }
 .edit-button{
     border-radius: 20px;
-    border: 1px solid #cfd9de;
+    border: 1px solid cornflowerblue;
+    background-color: darkseagreen;
+}
+.navigation {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    align-items: start;
 }
