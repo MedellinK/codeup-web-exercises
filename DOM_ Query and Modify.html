@@ -25,38 +25,66 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="button1">Main Header Change</button>
+<button id="button2">Blue sub header</button>
+<button id="button3">Grey Every Other</button>
+<button id="butt4">Lorem, BE GONE!</button>
+
 <script>
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
         let mainHeader = document.querySelector('#main-header');
-        console.log(mainHeader);
+        //console.log(mainHeader);
+
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-         mainHeader.innerHTML = "Javascript is Cool"
-        console.log(mainHeader)
+        //  mainHeader.innerHTML = "Javascript is Cool"
+        // console.log(mainHeader)
+    let mainHeaderText = mainHeader.innerHTML
+        // new exercise button 1 //
+        let button1 = document.querySelector('#button1')
+        button1.addEventListener(`click`, function (){
+            if (mainHeader.innerText === mainHeaderText){
+                mainHeader.innerHTML = "Javascript is Cool"
+            }else {
+                mainHeader.innerText = mainHeaderText
+            }
+        })
 
         // TODO: Uncomment the next line and get the sub header element by id
         let subHeader = document.querySelector("#sub-header");
-        console.log(subHeader)
+        //console.log(subHeader)
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue"
+        // subHeader.style.color = "blue"
+        let button2 = document.querySelector('#button2')
+        button2.addEventListener('click', function (){
+            subHeader.style.color = "blue"
+        })
 
         // TODO: Uncomment the next line and get all list items
-         let listItems = document.querySelector("ul");
-        console.log(listItems.innerText)
+        //  let listItems = document.querySelector("ul");
+        // console.log(listItems.innerText)
 
         let listItems2 = document.querySelectorAll('li')
         console.log(listItems2)
 
         // TODO: Set text color on every other list item to grey
         const everyOther = document.querySelectorAll('li');
-        everyOther.forEach((item, index) => {
-            if (index % 2 !== 0) {
-                item.style.color = 'grey';
-            }
-        });
+        // everyOther.forEach((item, index) => {
+        //     if (index % 2 !== 0) {
+        //         item.style.color = 'grey';
+        //     }
+        // });
+        let button3 = document.querySelector('#button3')
+        button3.addEventListener('click', function (){
+            everyOther.forEach((item, index) => {
+                if (index % 2 !== 0) {
+                    item.style.color = 'grey';
+                }
+            });
+        })
 
         // TODO: Set text color of li with dbid = 1 to blue
         // let colorOfItem1 = document.querySelectorAll("li")
@@ -71,10 +99,15 @@
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         // let missionAccomplished = document.querySelector('.sub-paragraph')
-        subParagraphs.innerText = 'Mission Accomplished!'
+        // subParagraphs.innerText = 'Mission Accomplished!'
+        let button4 = document.querySelector('#butt4')
+        button4.addEventListener('click', function (){
+            subParagraphs.innerText = 'Mission Accomplished!'
+        })
 
     })();
 </script>
 
 
-</body></html>
+</body>
+</html>
