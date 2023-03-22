@@ -1,0 +1,11 @@
+.invisible {
+    visibility: hidden;
+    /*background-color: darkslategrey;*/
+}
+.highlight{
+    background-color: yellow;
+
+}
+body {
+    margin-left: 10px;
+}

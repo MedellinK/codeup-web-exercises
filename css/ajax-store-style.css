@@ -1,0 +1,14 @@
+td {
+    border: 2px solid darkslategrey;
+    padding: 10px;
+    background-color: darkslategrey;
+    color: wheat;
+}
+
+th {
+    border: 3px solid wheat;
+    padding: 5px;
+    background-color: wheat;
+    color: darkslategrey;
+}
+h1 {}

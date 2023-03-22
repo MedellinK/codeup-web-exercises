@@ -1,0 +1,23 @@
+.column {
+    flex-direction: column;
+}
+
+.row {
+    padding: 5px;
+}
+
+
+
+.page-wrapper {
+    background-color: palevioletred;
+}
+
+.container {
+    background-color: paleturquoise;
+}
+
+h1, h2, h3, h5, p{
+    border: 2px solid darkslategrey;
+    padding: 5px;
+
+}

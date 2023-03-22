@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+    <link rel="stylesheet" href="css/ajax-store-style.css">
+</head>
+<body>
+
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<button id="btn" value="Reload Page" onClick="document.location.reload(true)">Refresh Inventory</button>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+(function() {
+    "use strict";
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+    const getInventory = async () => {
+        try {
+            let response = await fetch("/js/data/inventory.json")
+            let data = await response.json();
+            return data;
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    (async ()=>{
+
+        let inventory = await getInventory();
+        console.log(inventory);
+
+        let productsTable = document.querySelector('#insertProducts');
+        let productsHTML = "";
+
+        inventory.forEach(product => {
+
+            productsHTML += `
+            <tr>
+                <td>${product.title}</td>
+                <td>${product.quantity}</td>
+                <td>${product.price}</td>
+                <td>${product.categories.join(" , ")}</td>
+            </tr>
+        `
+
+        });
+
+        productsTable.innerHTML = productsHTML;
+
+
+        function toggleBtn() {
+            let btn = document.querySelector('#btn')
+            btn.addEventListener('click',function (){
+
+            })
+        }
+        toggleBtn()
+    })()
+
+    // $.ajax("/js/data/inventory.json").done(function (data,status,jqXhr){
+    //     console.log(data)
+    // })
+    // $.done(function (data){
+    //
+    // })
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+
+    // function renderInventory(insertProducts) {
+    //     let html = `
+    //     <div class="coffee-card">
+    //         <div class="coffee-name">${coffee.name}</div>
+    //         <div class="roast">${coffee.roast}</div>
+    //     </div>
+    // `;
+    //
+    //     return html;
+    // }
+    // tbody.innerHTML = renderInventory(inventory)
+})();
+</script>
+</body>
+</html>
