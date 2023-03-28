@@ -33,6 +33,10 @@
     justify-content: center;
 }
 
+.container.full-width {
+    max-width: unset;
+}
+
 /*
     The "row" is a container element that horizontally separates its
     children, which are usually columns. It also performs a secondary role
@@ -49,6 +53,9 @@
 /* Combo classes to extend the row's versatility */
 .row.full-width {
     max-width: unset;
+}
+.row.grow {
+    flex: 1 0 0;
 }
 .row.align-center {
     align-items: center;
@@ -107,4 +114,15 @@
 }
 .column.justify-bottom {
     justify-content: end;
+}
+
+.column.full-width {
+    max-width: unset;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.relative {
+    position: relative;
 }

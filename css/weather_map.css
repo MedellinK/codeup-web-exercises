@@ -133,3 +133,7 @@ input {
 #taco {
     padding: 0;
 }
+
+.description {
+    text-transform: capitalize;
+}

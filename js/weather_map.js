@@ -1,5 +1,7 @@
 // Immediately Invoked Function Expression
+
 (function () {
+
     // Makes my map load on screen
     mapboxgl.accessToken = MAPBOX_API_TOKEN;
     const map = new mapboxgl.Map({
@@ -64,7 +66,7 @@
       <br>
       <div class="row justify-center"><h1>${Math.round(data.main.temp)}°</h1></div>
       <br>
-      <div class="row justify-center"><h2>${data.weather[0].description}</h2></div>
+      <div class="row justify-center"><h2 class="description">${data.weather[0].description}</h2></div>
       <div class="row justify-center">
         <div class="column justify-center shrink" id="weather-img">
             <img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png" class="forecast-img" alt="picture depicting the state of the weather.">
@@ -75,12 +77,21 @@
       <div class="row">Humidity: ${Math.round(data.main.humidity)}</div>
       <div class="row">Sunrise is at ${sunrise.getHours()}:${sunriseMin} am</div>
       <div class="row">Sunset is at ${civilianTime(sunset.getHours())}:${sunsetMin} pm</div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="row">
+        <div class="column">
+            <img src="img/logo.png">
+        </div>
+      </div>
     `;
         } catch (error) {
             console.error(error);
         }
     };
-    /** function "getForecast" creates the contents of the forecast cards */
+    // function "getForecast" creates the contents of the forecast cards
     let getForecast = async (long, lat) => {
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=imperial&APPID=${OPEN_WEATHER_APPID}`
@@ -95,7 +106,7 @@
         <div class="column align-center justify-center forecast-box">
           <div class="row no-gap day-header justify-center" id="abbr-Day">
             <div class="column justify-center shrink">
-              <h3>${daysOfWeekAbbreviated[time.getDay()]}</h3>
+            <div class="row justify-center">${daysOfWeekAbbreviated[time.getDay()]}</div>
               <div class="row justify-center date-forecast">${dateFromTimeStamp(forecast.dt)}</div>
             </div>
             <div class="column justify-center shrink" id="forecast-img">
@@ -103,8 +114,8 @@
             </div>
           </div>
           <div class="row">${Math.round(forecast.main.temp)}</div>
-          <div class="row no-gap">High: ${Math.round(forecast.main.temp_max)}</div>
-          <div class="row no-gap">Low: ${Math.round(forecast.main.temp_min)}</div>
+          <div class="row">High: ${Math.round(forecast.main.temp_max)}</div>
+          <div class="row ">Low: ${Math.round(forecast.main.temp_min)}</div>
           <div class="row" id="facts">Kelvyn is great</div>
         </div>
       `;
