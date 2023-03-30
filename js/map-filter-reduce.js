@@ -160,18 +160,37 @@ const users = [
 let totalExperience = users.reduce((total, {yearsOfExperience: years}) => {
     return total + years
 },0);
-console.log(totalExperience)
+// console.log(totalExperience)
 let avg = totalExperience/ users.length
-console.log(avg)
+// console.log(avg)
 
-const longestEmail = users.reduce((longest, user) => {
-    if (user.email.length > longest.length) {
-        return user.email;
+
+
+const longestEmail = users.reduce((acc, {email}) => {
+    if (email.length > acc.length) {
+        return email;
     } else {
-        return longest;
+        return acc;
     }
 }, '');
 console.log(longestEmail)
+
+const names = users.reduce((acc,user) => {
+
+    acc.push(user.name)
+    return acc
+
+},[])
+console.log(names)
+ let string = names.join(', ')
+console.log(`Your instructors are: ${string}`)
+
+let hello = "Hello foo"
+console.log(hello)
+
+
+
+
 
 
 

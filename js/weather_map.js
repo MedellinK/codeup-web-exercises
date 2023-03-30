@@ -1,9 +1,12 @@
+import {keys} from './keys.js'
+
 // Immediately Invoked Function Expression
 
 (function () {
 
+
     // Makes my map load on screen
-    mapboxgl.accessToken = MAPBOX_API_TOKEN;
+    mapboxgl.accessToken = keys.mapbox;
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/navigation-night-v1', "width": "50%", // style URL
@@ -41,7 +44,7 @@
     // function "getWeather" creates the contents of the current weather column
     const getWeather = async (long, lat) => {
         try {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${OPEN_WEATHER_APPID}&units=imperial`);
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${keys.openweather}&units=imperial`);
             const data = await response.json();
             console.log(data);
             const time = new Date();
@@ -83,7 +86,7 @@
       <br>
       <div class="row">
         <div class="column">
-            <img src="img/logo.png">
+<!--            <img src="img/logo.png">-->
         </div>
       </div>
     `;
@@ -94,7 +97,7 @@
     // function "getForecast" creates the contents of the forecast cards
     let getForecast = async (long, lat) => {
         const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=imperial&APPID=${OPEN_WEATHER_APPID}`
+            `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=imperial&APPID=${keys.openweather}`
         );
         const data = await response.json();
         console.log(data);
@@ -130,8 +133,8 @@
         if (newMarker) {
             newMarker.remove();
         }
-        userInput = document.querySelector("#setMarker").value
-        let coords = await geocode(userInput, MAPBOX_API_TOKEN);
+       let userInput = document.querySelector("#setMarker").value
+        let coords = await geocode(userInput, keys.mapbox);
         newMarker = new mapboxgl.Marker()
             .setLngLat(coords)
             .addTo(map);
