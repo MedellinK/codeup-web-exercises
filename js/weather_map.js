@@ -58,7 +58,7 @@ import {keys} from './keys.js'
             // if (sunsetMin < 10) { sunsetMin = '0' + sunsetMin}
             sunsetMin = sunsetMin < 10 ? '0' + sunsetMin : sunsetMin
             weatherDiv.innerHTML = `
-      <div class="row no-gap justify-center"><h1>${data.name}</h1></div>
+      <div class="row justify-center"><h1>${data.name}</h1></div>
       <br>
       <div class="row full-width" id="taco">
         <div class="column full-width">
@@ -75,20 +75,17 @@ import {keys} from './keys.js'
             <img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png" class="forecast-img" alt="picture depicting the state of the weather.">
         </div> 
       </div>
-      <div class="row">High: ${Math.round(data.main.temp_max)}</div>
+      <div class="row ">High: ${Math.round(data.main.temp_max)}</div>
       <div class="row">Low: ${Math.round(data.main.temp_min)}</div>
       <div class="row">Humidity: ${Math.round(data.main.humidity)}</div>
       <div class="row">Sunrise is at ${sunrise.getHours()}:${sunriseMin} am</div>
       <div class="row">Sunset is at ${civilianTime(sunset.getHours())}:${sunsetMin} pm</div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <div class="row">
-        <div class="column">
-<!--            <img src="img/logo.png">-->
-        </div>
-      </div>
+      <div class="row">Wind Speed: ${Math.round(data.wind.speed)} mph</div>
+      <div class="row">Wind Direction: ${Math.round(data.wind.deg)}°</div>
+      <div class="row">Feels Like: ${Math.round(data.main.feels_like)}°</div>
+      <div class="row">Clouds: ${Math.round(data.clouds.all)}%</div>
+      <div class="row">Country: ${data.sys.country}</div>
+        
     `;
         } catch (error) {
             console.error(error);
@@ -119,6 +116,12 @@ import {keys} from './keys.js'
           <div class="row">${Math.round(forecast.main.temp)}</div>
           <div class="row">High: ${Math.round(forecast.main.temp_max)}</div>
           <div class="row ">Low: ${Math.round(forecast.main.temp_min)}</div>
+            <div class="row">Humidity: ${Math.round(forecast.main.humidity)}</div>
+            <div class="row">Wind Speed: ${Math.round(forecast.wind.speed)} mph</div>
+            <div class="row">Wind Direction: ${Math.round(forecast.wind.deg)}°</div>
+            <div class="row">Feels Like: ${Math.round(forecast.main.feels_like)}°</div>
+            <div class="row">Description: ${forecast.weather[0].description}</div>
+            <div class="row">Clouds: ${forecast.clouds.all}%</div>
           <div class="row" id="facts">Kelvyn is great</div>
         </div>
       `;
